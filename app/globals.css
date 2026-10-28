@@ -8,6 +8,8 @@
   --good: #1f9d5c;
   --warn: #c77c0a;
   --bad: #d14343;
+  --page-bg: #fb923c;
+  --page-muted: #5c2a06;
   --radius: 12px;
 }
 @media (prefers-color-scheme: dark) {
@@ -21,6 +23,8 @@
     --good: #3cc47f;
     --warn: #e5a23a;
     --bad: #ef6b6b;
+    --page-bg: #9a3412;
+    --page-muted: #fed7aa;
   }
 }
 
@@ -28,7 +32,7 @@
 body {
   margin: 0;
   font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
-  background: var(--bg);
+  background: var(--page-bg);
   color: var(--text);
   line-height: 1.4;
 }
@@ -38,6 +42,8 @@ h2 { font-size: 1.05rem; margin: 0; }
 h3 { margin: 0 0 12px; }
 .muted { color: var(--muted); }
 .small { font-size: .85rem; }
+/* text sitting directly on the orange page, outside the white cards */
+main > .muted, footer .muted { color: var(--page-muted); }
 
 .topbar, main, footer { max-width: 900px; margin: 0 auto; padding: 0 16px; }
 .topbar {
